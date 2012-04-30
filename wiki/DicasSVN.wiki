@@ -1,0 +1,58 @@
+#summary Instruções para poder utilizar o SVN.
+
+== Instalação ==
+
+Para saber se o SVN está instalado digite no terminal `svn`, se aparecer `Digite 'svn help' para uso.` então ele já está instalado, caso não esteja, instalar através do comando:
+{{{sudo apt-get install subversion}}}
+
+
+== Iniciar Repositório ==
+
+Para obter o repositório do projeto, como usuário normal através do terminal, acesse o diretório onde será armazenado um repositório local, por exemplo _desktop_, e digite o comando:
+{{{
+svn checkout https://linhasmetro.googlecode.com/svn/trunk/ linhasmetro
+}}}
+*checkout* será utilizado somente desta vez, ele cria um diretório _linhasmetro_ que será o repositório local do projeto.
+
+
+== Testar ==
+
+Abra o arquivo _linhasmetro.cbp_ encontrado em _linhasmetro/codigos_ com o programa CodeBlocks, faça alguma modificação em algum arquivo e salve a modificação.
+Agora voltando ao terminal, acesse o diretório _linhasmetro_ que foi criado pelo comando _svn checkout_ e digite o comando:
+{{{
+svn status
+}}}
+*status* verifica todo o diretório por modificações tanto no repositório local como no servidor, se houver, será mostrado o nome do arquivo que foi modificado, e antes uma letra que pode ser:
+    * *A* adicionado
+    * *D* deletado
+    * *M* modificado
+    * *C* existe conflito, foi modificado no repositório local e no servidor
+    * *?* arquivo não foi adicionado ao repositório, para adicionar ele digite `svn add <caminho e nome do arquivo>`
+Se anteriormente foi modificado apenas um arquivo, provavelmente ele aparecerá aqui, para ver o que foi modificado digite:
+{{{
+svn diff <caminho e nome do arquivo>
+}}}
+*diff* mostra as linhas que foram alteradas, colocando *+* antes das linhas que foram adicionadas e *-* antes das linhas que foram removidas.
+Para enviar as modificações para o servidor, antes de tudo e para evitar conflitos de arquivos digite o comando:
+{{{
+svn update
+}}}
+*update* atualiza o conteúdo do repositório local com as modificações do servidor.
+E aí sim digite:
+{{{
+svn commit
+}}}
+*commit* envia as modificações feitas no repositório local, para o servidor.
+Os comandos _commit_ e _update_ podem ser feitos de um ou mais arquivos específicos, bastando passar o caminho e nome dos arquivos após o comando.
+Lembrando que por exemplo um `svn commit` somente ira fazer commit do diretório e subdiretórios em que se está acessando, então se não for fazer de arquivos específicos, utilizar estes comandos, a partir da raiz do repositório (diretório linhasmetro).
+
+E para voltar atrás digite:
+{{{
+svn update --revision PREV <caminho e nome do arquivo ou nenhum para tudo>
+}}}
+ao invés de PREV, poderia ser o número da versão em que se deseja voltar atrás.
+
+
+== Resumo ==
+
+...
