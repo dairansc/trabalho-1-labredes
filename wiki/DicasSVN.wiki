@@ -10,15 +10,15 @@ Para saber se o SVN está instalado digite no terminal `svn`, se aparecer `Digit
 
 Para obter o repositório do projeto, como usuário normal através do terminal, acesse o diretório onde será armazenado um repositório local, por exemplo _desktop_, e digite o comando:
 {{{
-svn checkout https://linhasmetro.googlecode.com/svn/trunk/ linhasmetro
+svn checkout https://trabalho-1-labredes.googlecode.com/svn/trunk/ trabalho-1-labredes
 }}}
-*checkout* será utilizado somente desta vez, ele cria um diretório _linhasmetro_ que será o repositório local do projeto.
+*checkout* será utilizado somente desta vez, ele cria um diretório _trabalho-1-labredes_ que será o repositório local do projeto.
 
 
 == Testar ==
 
-Abra o arquivo _linhasmetro.cbp_ encontrado em _linhasmetro/codigos_ com o programa CodeBlocks, faça alguma modificação em algum arquivo e salve a modificação.
-Agora voltando ao terminal, acesse o diretório _linhasmetro_ que foi criado pelo comando _svn checkout_ e digite o comando:
+Abra o arquivo _trabalho-1-labredes.cbp_ encontrado em _trabalho-1-labredes/codigos_ com o programa CodeBlocks, faça alguma modificação em algum arquivo e salve a modificação.
+Agora voltando ao terminal, acesse o diretório _trabalho-1-labredes_ que foi criado pelo comando _svn checkout_ e digite o comando:
 {{{
 svn status
 }}}
@@ -44,13 +44,24 @@ svn commit
 }}}
 *commit* envia as modificações feitas no repositório local, para o servidor.
 Os comandos _commit_ e _update_ podem ser feitos de um ou mais arquivos específicos, bastando passar o caminho e nome dos arquivos após o comando.
-Lembrando que por exemplo um `svn commit` somente ira fazer commit do diretório e subdiretórios em que se está acessando, então se não for fazer de arquivos específicos, utilizar estes comandos, a partir da raiz do repositório (diretório linhasmetro).
+Lembrando que por exemplo um `svn commit` somente ira fazer commit do diretório e subdiretórios em que se está acessando, então se não for fazer de arquivos específicos, utilizar estes comandos, a partir da raiz do repositório (diretório trabalho-1-labredes).
 
 E para voltar atrás digite:
 {{{
 svn update --revision PREV <caminho e nome do arquivo ou nenhum para tudo>
 }}}
 ao invés de PREV, poderia ser o número da versão em que se deseja voltar atrás.
+
+
+== Modificações em diretórios ou arquivos ==
+Basicamente são os mesmos comandos por linha de comando do linux, mas colocando o comando `svn <operação>`, por exemplo:
+{{{
+svn [delete|del|remove|rm] <arquivo ou diretório>
+svn mv <arquivo ou diretório>
+svn [copy|cp] <arquivo ou diretório>
+svn mkdir <diretório>
+}}}
+Após fazer essas modificações, se for executado o comando `svn status` ele vai indicar quais alterações foram feitas e ainda não foram postadas para o servidor.
 
 
 == Resumo ==
