@@ -12,7 +12,7 @@ Para obter o repositório do projeto, como usuário normal através do terminal,
 {{{
 svn checkout https://trabalho-1-labredes.googlecode.com/svn/trunk/ trabalho-1-labredes --username <usuario>@gmail.com
 
-Quando for perguntado, entre com o a senha gerada em [http://code.google.com/hosting/settings].
+Quando for perguntado, entre com o a senha gerada em http://code.google.com/hosting/settings.
 }}}
 *checkout* será utilizado somente desta vez, ele cria um diretório _trabalho-1-labredes_ que será o repositório local do projeto.
 
