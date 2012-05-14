@@ -3,7 +3,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/ioctl.h>
-#include <strings.h>
+#include <string.h>
 #include <unistd.h>
 
 /* Diretórios: net, netinet, linux contém os includes que descrevem */
@@ -15,9 +15,9 @@
 #include <netinet/ether.h> //header ethernet
 #include <netinet/in.h> //definição de protocolos
 #include <arpa/inet.h> //funções para manipulação de endereços IP
-#include <netinet/in_systm.h> //tipos de dados 
+#include <netinet/in_systm.h> //tipos de dados
 
-#include "LibraryC.h"
+//#include "LibraryC.h"
 
 #if !defined(IPVERSION)
 #define IPVERSION 4
@@ -25,8 +25,8 @@
 
 #define BUFFSIZE 1500
 
-// Atencao!! Confira no /usr/include do seu sisop o nome correto 
-// das estruturas de dados dos protocolos. 
+// Atencao!! Confira no /usr/include do seu sisop o nome correto
+// das estruturas de dados dos protocolos.
 
   unsigned char buff1[BUFFSIZE]; // buffer de recepcao
   int sockd;
@@ -37,7 +37,7 @@
 int main(int argc,char *argv[])
 {
 	/* Test for correct number of arguments */
-    if ((argc < 2) || (argc > 3))    
+    if ((argc < 2) || (argc > 3))
     {
        fprintf(stderr, "Usage: %s <Interface>\n",argv[0]);
        exit(1);
@@ -53,18 +53,18 @@ int main(int argc,char *argv[])
 
 	//printf("%d \n", sockd);
 
-	// O procedimento abaixo é utilizado para "setar" a 
+	// O procedimento abaixo é utilizado para "setar" a
 	// interface em modo promíscuo
-  
+
 	strcpy(ifr.ifr_name, argv[1]);
 	if(ioctl(sockd, SIOCGIFINDEX, &ifr) < 0) {printf("erro no ioctl!"); }
 	ioctl(sockd, SIOCGIFFLAGS, &ifr);
 	ifr.ifr_flags |= IFF_PROMISC;
-	ioctl(sockd, SIOCSIFFLAGS, &ifr); 
+	ioctl(sockd, SIOCSIFFLAGS, &ifr);
 
 	// recepção de pacotes
 	printf(":: Capturando pacotes ::\n");
-	while (1) 
+	while (1)
 	{
 	    int i = 0;
         recv(sockd,(char*)&buff1,sizeof(buff1),0x0);
@@ -81,7 +81,7 @@ int main(int argc,char *argv[])
 		// Protocolo IPv4
 		if((buff1[12] == 8) && (buff1[13] == 0))
 		{
-		    if (buff1[14] == 69)  printf("       Version IP: 4\n", buff1[14]);
+		    if (buff1[14] == 69)  printf("       Version IP: 4\n");
 		    else printf("       Version IP: %02x\n", buff1[14]);
 			//printf("              DSF: %02x\n", buff1[15]);
 			printf("     Total Lenght: %02x%02x\n", buff1[16], buff1[17]);
