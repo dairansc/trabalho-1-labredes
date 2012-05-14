@@ -6,6 +6,9 @@
 #include <string.h>
 #include <unistd.h>
 
+//  Verificar instalação
+//  http://joaopizani.hopto.org/2009/09/subversion-nautilus/
+
 /* Diretórios: net, netinet, linux contém os includes que descrevem */
 /* as estruturas de dados do header dos protocolos   		    */
 /* Cuidado: se uitlizar netinet não uitlize o diretório linux e     */
