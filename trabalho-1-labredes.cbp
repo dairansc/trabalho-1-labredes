@@ -8,7 +8,7 @@
 		<Build>
 			<Target title="Release">
 				<Option output="trabalho-1-labredes" prefix_auto="1" extension_auto="1" />
-				<Option object_output="/home/labredes/Área de trabalho/trabalho-1-labredes//.objs" />
+				<Option object_output="/home/labredes/Área de trabalho/trabalho-1-labredes/.objs" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -22,6 +22,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="codigos/Socket.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codigos/Socket.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
