@@ -22,7 +22,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="codigos/Socket.c">
+		<Unit filename="codigos/Main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="codigos/Socket.h" />
