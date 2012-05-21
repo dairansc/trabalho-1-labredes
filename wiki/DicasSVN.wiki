@@ -1,9 +1,19 @@
-#summary Instruções para poder utilizar o SVN.
+#summary Instruções para poder utilizar o SVN e iniciar o projeto.
 
 == Instalação ==
 
-Para saber se o SVN está instalado digite no terminal `svn`, se aparecer `Digite 'svn help' para uso.` então ele já está instalado, caso não esteja, instalar através do comando:
-{{{sudo apt-get install subversion}}}
+Ferramentas necessárias
+Subversion - faz o controle de versões SVN
+CodeBlocks - compilador e editor de projetos C/C++
+RabbitVCS - gerenciador gráfico para o SVN no próprio Nautilus
+Meld - comparador (diff) gráfico de arquivos
+
+Instalar ferramentas com os seguintes comandos:
+{{{
+sudo add-apt-repository ppa:rabbitvcs/ppa
+sudo apt-get update
+sudo apt-get install codeblocks meld subversion rabbitvcs-nautilus3 rabbitvcs-gedit rabbitvcs-cli
+}}}
 
 
 == Iniciar Repositório ==
