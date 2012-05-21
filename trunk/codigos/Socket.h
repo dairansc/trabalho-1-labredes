@@ -10,5 +10,5 @@ void DieWithError(char *errorMessage)
     exit(1);
 }
 
-
 #endif
+
