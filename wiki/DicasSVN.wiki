@@ -2,11 +2,11 @@
 
 == Instalação ==
 
-Ferramentas necessárias
-Subversion - faz o controle de versões SVN
-CodeBlocks - compilador e editor de projetos C/C++
-RabbitVCS - gerenciador gráfico para o SVN no próprio Nautilus
-Meld - comparador (diff) gráfico de arquivos
+Ferramentas necessárias:
+    * Subversion - faz o controle de versões SVN
+    * CodeBlocks - compilador e editor de projetos C/C++
+    * RabbitVCS - gerenciador gráfico para o SVN no próprio Nautilus
+    * Meld - comparador (diff) gráfico de arquivos
 
 Instalar ferramentas com os seguintes comandos:
 {{{
