@@ -1,0 +1,43 @@
+ 1.   Cabeçalhos e localização dos principais protocolos no Linux
+
+Ethernet
+struct ether_header
+/usr/include/net/ethernet.h
+
+ARP
+struct arphdr
+/usr/include/net/if_arp.h
+
+IP
+struct iphdr
+/usr/include/netinet/ip.h
+
+ICMP
+struct icmphdr
+/usr/include/netinet/ip_icmp.h
+
+2. Código com exemplo de uso das funções htons e htonl.
+
+#include <stdio.h>
+#include <arpa/inet.h>
+
+int main(int argc, char **argv) {
+
+short s;
+long l;
+
+if(argc != 2) return 0;
+
+sscanf(argv[1], "%hd", &s);
+printf("Short: %hd\n", s);
+printf("Host Byte Order = %04x\n", (uint16_t) s);
+printf("Network Byte Order = %04x\n", htons(s));
+
+sscanf(argv[1], "%ld", &l);
+printf("Long: %ld\n", l);
+printf("Host Byte Order = %04x\n", (uint32_t) l);
+printf("Network Byte Order = %04x\n", htonl(l));
+}
+
+
+Última atualização: sexta, 23 dezembro 2011, 14:32
