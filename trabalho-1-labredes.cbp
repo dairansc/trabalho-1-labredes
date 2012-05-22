@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Release">
-				<Option output="trabalho-1-labredes" prefix_auto="1" extension_auto="1" />
+				<Option output="contra-ataque" prefix_auto="1" extension_auto="1" />
 				<Option object_output="/home/labredes/Área de trabalho/trabalho-1-labredes/.objs" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -21,11 +21,15 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="eth1" />
 		</Compiler>
-		<Unit filename="codigos/Main.c">
+		<Unit filename="codigos/Socket.h" />
+		<Unit filename="codigos/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="codigos/Socket.h" />
+		<Unit filename="codigos/slist.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger />
