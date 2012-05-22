@@ -24,9 +24,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Retrieved from: http://en.literateprograms.org/Singly_linked_list_(C)?oldid=15494
 */
 
-#include<stdlib.h>
-#include<stdio.h>
-#include<string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
 typedef struct node_s {
 	void *data;
 	struct node_s *next;
@@ -80,9 +81,35 @@ NODE *list_find(NODE *node, int(*func)(void*,void*), void *data)
 	}
 	return NULL;
 }
-int printstring(void *s)
+int printMaquinas(void *m)
 {
-	printf("%s\n", (char *)s);
+    int i;
+    MAQUINAS *maquina;
+    maquina = (MAQUINAS *)m;
+	printf(" - MAC= %02X", maquina->mac[0]);
+    for(i=1; i<6; i++){
+        printf(":%02X", maquina->mac[i]);
+    }/*
+                    printf("\n");
+                    printf("  MAC Destination: ");
+
+                    for(i=0; i<6; i++){
+                        printf("%02X:", etherhdr->ether_dhost[i]);
+                    }
+                    printf("\n             Type: %04X\n", ntohs(etherhdr->ether_type));
+
+
+                    printf("IP\n");
+                    
+                    memcpy(&source, &iphdrptr->saddr, 4);
+                    memcpy(&dest, &iphdrptr->daddr, 4);
+                    printf("        IP Source: %s\n", inet_ntoa(source));
+                    printf("   IP Destination: %s\n", inet_ntoa(dest));
+
+                    printf("ICMP\n");
+	
+	
+	printf("%s\n", (char *)m);*/
 	return 0;
 }
 int findstring(void *listdata, void *searchdata)
