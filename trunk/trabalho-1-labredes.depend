@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1337685121 source:/home/dairan/Dropbox/labredes-t2/codigos/Main.c
+	<stdlib.h>
+	<stdio.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/ioctl.h>
+	<strings.h>
+	<unistd.h>
+	<net/if.h>
+	<netinet/ether.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netinet/in_systm.h>
+	<stdlib.h>
+	<stdio.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/ioctl.h>
+	<string.h>
+	<unistd.h>
+	<net/if.h>
+	<netinet/ether.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netinet/ip.h>
+	<netinet/ip_icmp.h>
+	<netinet/in_systm.h>
+

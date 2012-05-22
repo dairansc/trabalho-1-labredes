@@ -1,0 +1,14 @@
+Trabalho 2 - socket raw
+
+Ping flood counter attack
+
+O trabalho consiste em desenvolver uma programa usando socket raw que possa contra-atacar ataques do tipo ping flood usando técnicas como IP spooing e DDoS (Distributed Denial of Service). O programa deve funcionar da seguinte forma:
+
+1) O programa inicia monitorando as máquinas da rede que fazem ping (Echo Request) para a máquina que roda o programa e cria uma lista destas máquinas. O programa deve imprimir na tela o endereço MAC e IP de cada máquina identificada.
+
+2) Quando o programa identifica que uma máquina (atacante) está enviando um ping flood para a sua máquina, ele usa a lista de máquinas armazenada para contra atacar (DDoS), enviando um ping flood para cada máquina da lista (excluindo a máquina atacante), mas trocando o campo IP origem pelo IP da máquina atacante (IP spoofing).
+
+O trabalho pode ser realizado em duplas e deve ser entregue no Moodle até o início da aula do dia da apresentação indicado na agenda no Moodle. Todos os componentes do grupo deverão estar presentes no dia da apresentação.
+
+Última atualização: segunda, 21 maio 2012, 10:21
+
