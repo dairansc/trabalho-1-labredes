@@ -21,7 +21,6 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add option="eth1" />
 		</Compiler>
 		<Unit filename="codigos/Socket.h" />
 		<Unit filename="codigos/main.c">

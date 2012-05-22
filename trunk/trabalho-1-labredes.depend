@@ -27,3 +27,30 @@
 	<netinet/ip_icmp.h>
 	<netinet/in_systm.h>
 
+1337687831 source:/home/dairan/Dropbox/labredes-t2/codigos/slist.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1337709341 source:/home/dairan/Dropbox/labredes-t2/codigos/main.c
+	<stdlib.h>
+	<stdio.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/ioctl.h>
+	<string.h>
+	<unistd.h>
+	<net/if.h>
+	<netinet/ether.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netinet/ip.h>
+	<netinet/ip_icmp.h>
+	<netinet/in_systm.h>
+	"slist.c"
+
+1337687831 /home/dairan/Dropbox/labredes-t2/codigos/slist.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
